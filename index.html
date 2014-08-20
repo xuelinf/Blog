@@ -1,60 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Blog : This is my blog. JS study note.">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Blog</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/xuelinf/Blog">View on GitHub</a>
-
-          <h1 id="project_title">Blog</h1>
-          <h2 id="project_tagline">This is my blog. JS study note.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/xuelinf/Blog/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/xuelinf/Blog/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
-<a name="welcome-to-my-blog" class="anchor" href="#welcome-to-my-blog"><span class="octicon octicon-link"></span></a>welcome to my blog.</h2>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Blog maintained by <a href="https://github.com/xuelinf">xuelinf</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("xuelinf");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+<head>
+<meta charset="utf-8">
+<title>xuelinf's blog</title>
+  <script src="scripts/modernizr.custom.73050.js"></script>
+  <link rel="stylesheet" media="screen" href="styles/basic.css" />
+</head>
 
 
-  </body>
+<body>
+  <header>
+ <img src="images/logo.png" alt="xuelinf's blog" width=100% height="326"  />
+
+  <nav>
+       <ul>
+         <li><a href="index.html">首页</a></li>
+         <li><a href="article.html">文章</a></li>
+         <li><a href="file.html">归档</a></li>
+         <li><a href="history.html">历史版本</a></li>
+         <li><a href="about.html">关于</a></li>
+    </ul>
+    </nav>
+</header>
+   <article>
+    <h1>这是我的第一个网页</h1>
+    <p>尝试制作了第一个网页，比较水。以练习html和css为主，js稍微用了一下。看着书敲了一些代码进去，发现呈现效果没有自己想象的那么容易。也让自己有一些收获。</p>
+    <h3><b>1:要先画出骨骼，再在骨骼上添加</b></h3>
+    <p>框架是最重要的，刚上手写网页的时候，很容易想要从头一步一步写到最后，但这样貌似会很麻烦。正确的做法是，先用html写出框架，然后用css进行布局排版，用css进行颜色排版，然后再用css修正部分效果，最后再尝试用js对dom进行优化和添加动画效果等高级效果。</p>
+    <h3><b>2:务必要注释</b></h3>
+    <p>养成良好的注释习惯是必要的，因为在进行效果编写的时候，很容易遗忘自己前边代码的内容。此时我觉得应当准备两样东西，一个是节点管理，方便查询；另一个就是注释，方便快速定位到代码行。</p>
+    <h3><b>3:排版时注意事项</b></h3>
+    <p>排版时候，不要看到一样，做一样，要根据框架结构，从大到小，逐个进行排版。每一个id名或者class命名要有一定的规则，不要太随意。</p>
+    
+</article>
+<script src="scripts/global.js"></script>
+</body>
 </html>
