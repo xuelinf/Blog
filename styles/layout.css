@@ -1,0 +1,29 @@
+section, header, article, nav {
+	display: block;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 1em 10%;
+  background-image: url(../images/background.gif);
+  background-attachment: fixed;
+  background-position: top left;
+  background-repeat: repeat-x;
+  max-width: 80em;
+}
+
+body {
+	position:fixed;
+	left:25%;
+	right:25%;
+}
+
+nav {
+	position:fixed;
+	left:25%;
+	right:25%;
+}

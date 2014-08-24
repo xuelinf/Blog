@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>xuelinf's Blog</title>
+
+  
+  <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/code.css">
+  <link rel="shortcut icon" href="../images/xuelinf.ico">
+  <style type="text/css">
+  .container .row .span10 .lead {
+	font-family: "Microsoft YaHei UI";
+	text-indent: 2em;
+}
+  </style>
+  
+   <style type="text/css">
+
+  </style>
+  
+</head>
+  
+
+<body>
+
+<div class="container">
+  <div class="pin-wrapper">
+	<div class="row">
+		<div class="span12">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container-fluid">
+						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">xuelinf's Blog</a>
+						<div class="nav-collapse collapse navbar-responsive-collapse">
+							<ul class="nav">
+								<li >
+									<a href="../index.html">Home</a>
+								</li>
+								<li class="active">
+									<a href="../article.html">文章</a>
+								</li>
+								                                
+								<li class="dropdown">
+									 <a data-toggle="dropdown" class="dropdown-toggle" href="file.html">归档<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li class="divider">
+										</li>						
+										<li class="nav-header">
+											August 2014
+										</li>
+										<li>
+											<a href="../articles/20140822.html">myBlog1.0出发</a>
+										</li>
+										<li>
+											<a href="../articles/20140824.html">jquery实现点击显示隐藏内容</a>
+										</li>
+                                        <li class="divider">
+										</li>
+                                        <li>
+											<a href="#">更早</a>
+										</li>
+									</ul>
+								</li>
+                                <li>
+									<a href="../about.html">关于</a>
+								</li>
+							</ul>
+							<ul class="nav pull-right">
+								
+								<li class="divider-vertical">
+								</li>
+								<li class="dropdown">
+									 <a data-toggle="dropdown" class="dropdown-toggle" href="#">历史版本<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">myBlog 1.0</a>
+										</li>
+										<li>
+											<a href="#">myBlog 2.0(尚无)</a>
+										</li>
+										
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+    </div>
+    <div class="row">
+		<div class="span1">
+		</div>
+		<div class="span10">
+        <span class="label">javaScript学习笔记</span>
+        <h1 class="text-center">jquery实现点击显示隐藏内容</h1>
+        <p class="lead">&nbsp;</p>
+        <p class="lead">&nbsp;</p>
+        <p class="lead">通过点击按钮将精简的文字切换成完整的文字，这在网页中是比较常见的，通过javaScript dom操作可以实现这一功能。这里讲一下jquery的方法。</p>
+
+        <p class="lead">因为jquery大大的缩减了代码量，所以在熟练使用jquery的情况下，能够减少工作量，提高效率，这也算是学习jquery的第一大好处。Jquery的宗旨就是&lsquo;Write less do more&rsquo;，「多学一点知识，少写一行代码」&hellip;&hellip;</p>
+
+        <p class="lead">下面以点击切换显示隐藏为例，展示一下jquery的强大之处。</p>
+
+        <p class="lead">我们先创建一个列表。</p>
+        <div class="bubble-box arrow-top"> 
+        <div class="wrap">
+<p>&lt;div class=&quot;SubCategoryBox&quot;&gt;&lt;ul&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;佳能&lt;/a&gt;&lt;i&gt;(30440) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;索尼&lt;/a&gt;&lt;i&gt;(27220) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;三星&lt;/a&gt;&lt;i&gt;(20808) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;尼康&lt;/a&gt;&lt;i&gt;(17821) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;松下&lt;/a&gt;&lt;i&gt;(12289) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;卡西欧&lt;/a&gt;&lt;i&gt;(8242) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;富士&lt;/a&gt;&lt;i&gt;(14894) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;柯达&lt;/a&gt;&lt;i&gt;(9520) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;宾得&lt;/a&gt;&lt;i&gt;(2195) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;理光&lt;/a&gt;&lt;i&gt;(4114) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;奥林巴斯&lt;/a&gt;&lt;i&gt;(12205) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;明基&lt;/a&gt;&lt;i&gt;(1466) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;爱国者&lt;/a&gt;&lt;i&gt;(3091) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;li &gt;&lt;a href=&quot;#&quot;&gt;其它品牌相机&lt;/a&gt;&lt;i&gt;(7275) &lt;/i&gt;&lt;/li&gt;</p>
+
+<p>&lt;/ul&gt;&lt;/div&gt;</p>
+        </div> </div> 
+        <p><span class="lead">列表创建完毕之后，现在我们想要仅仅显示前五个元素，后边的暂时隐藏，然后添加一个按钮，名字叫显示全部品牌。</span></p>
+        <p><span class="lead">我们先创建一个列表。</span></p>
+        <div class="bubble-box arrow-top"> 
+        <div class="wrap">
+<p>&lt;div class=&quot;showmore&quot;&gt;</p>
+
+<p>&lt;a href=&quot;more.html&quot;&gt;&lt;span&gt;显示全部品牌&lt;/span&gt;&lt;/a&gt;</p>
+
+<p>&lt;/div&gt;</p>       
+        </div> </div>
+        
+        
+        <p class="lead">然后我们对script进行编写。</p>
+        
+        <div class="bubble-box arrow-top"> 
+        <div class="wrap">
+<p>&lt;script&gt;</p>
+
+<p>$(function(){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp; 等待DOM加载完毕.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var $category = $(&#39;ul li:gt(5):not(:last)&#39;);&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp; 获得索引值大于5的品牌集合对象(除最后一条)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $category.hide();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; //&nbsp; 隐藏上面获取到的jQuery对象。</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var $toggleBtn = $(&#39;div.showmore &gt; a&#39;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; 获取&ldquo;显示全部品牌&rdquo;按钮</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $toggleBtn.click(function(){</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if($category.is(&quot;:visible&quot;)){</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $category.hide();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;//&nbsp; 隐藏$category</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(&#39;.showmore a span&#39;)</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .css(&quot;background&quot;,&quot;url(img/down.gif) no-repeat 0 0&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .text(&quot;显示全部品牌&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //改变背景图片和文本</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(&#39;ul li&#39;).removeClass(&quot;promoted&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 去掉高亮样式</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; }else{</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $category.show();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;//&nbsp; 显示$category</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(&#39;.showmore a span&#39;)</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .css(&quot;background&quot;,&quot;url(img/up.gif) no-repeat 0 0&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .text(&quot;精简显示品牌&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //改变背景图片和文本</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(&#39;ul li&#39;).filter(&quot;:contains(&#39;佳能&#39;),:contains(&#39;尼康&#39;),:contains(&#39;奥林巴斯&#39;)&quot;)</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .addClass(&quot;promoted&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //添加高亮样式</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; //超链接不跳转</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; })</p>
+
+<p>})</p>
+
+<p>&lt;/script&gt;</p>
+        </div> </div>
+        
+        <p class="lead">剥离出其中的关键操作：</p>
+        <div class="bubble-box arrow-top"> 
+        <div class="wrap">
+<p>var $category = $(&#39;ul li:gt(5):not(:last)&#39;);&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp; 获得索引值大于5的品牌集合对象(除最后一条)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>$category.hide();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; //&nbsp; 隐藏上面获取到的jQuery对象。</p>
+
+<p>&nbsp;</p>
+
+<p>$toggleBtn.click(function(){</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if()){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+
+<p>else{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+
+<p>&nbsp;</p>
+         </div> </div>
+        <p class="lead">最后别忘了加入：</p>
+        <div class="bubble-box arrow-top"> 
+        <div class="wrap">
+<p>return false;</p>
+        </div></div>
+        <p class="lead">将禁止按钮的页面跳转。（为什么一定要给button添加链接呢，这涉及到javaScript操作的平稳退化，在下一篇文章我会写一写）。</p>
+
+        <p class="lead">效果图</p>
+        <div class="bubble-box arrow-top"> 
+        <div class="wrap">
+        <img src="../images/2014082401.png" alt="image01" />
+        <p class="lead">&nbsp;</p>
+        <img src="../images/2014082402.png" alt="image02" />
+        </div></div>
+        
+        <p class="lead">&nbsp;</p>
+        
+
+        <p class="lead">Ps:这一篇没什么难度，主要是培养自己写学习笔记的习惯，同时丰富一下页面内容。也方便日后自己回顾自己的学习内容。</p> 
+        <p class="lead">&nbsp;</p><p class="lead">&nbsp;</p>     
+
+
+		</div>
+		<div class="span1">
+		</div>
+	</div>
+	
+
+
+	<div class="row">
+		<div class="span12">
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<div class="container-fluid">
+						 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand">推荐站点</a>
+						<div class="nav-collapse collapse navbar-responsive-collapse">
+							<ul class="nav">
+								<li class="active">
+									<a href="www.douban.com">豆瓣</a>
+								</li>
+								<li>
+									<a href="www.zhihu.com">知乎</a>
+								</li>
+								<li>
+									<a href="www.duokan.com">多看</a>
+								</li>
+                                <li>
+									<a href="www.w3cschool.cc">W3Cschool</a>
+								</li>
+                                <li>
+									<a href="http://weibo.com/xuelinfeng">个人微博</a>
+								</li>
+								
+							</ul>
+							<ul class="nav pull-right">
+								
+								<li class="divider-vertical">
+								</li>
+								<li>
+									<a href="../about.html">联系方式</a>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="../scripts/jquery.pin.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://cdn.bootcss.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script>$(".pin-wrapper").pin();</script>   
+	
+</body>
+</html>
+
+
