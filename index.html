@@ -39,7 +39,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 				</ol>
 				<div class="carousel-inner">
 					<div class="item">
-						<img alt="" src="images/image1.png" />
+						<img alt="思想" src="images/image1.png" />
 						<div class="carousel-caption">
 							
 							<p>
@@ -48,7 +48,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 						</div>
 					</div>
 					<div class="item active">
-						<img alt="" src="images/image2.png" />
+						<img alt="自我" src="images/image2.png" />
 						<div class="carousel-caption">
 							
 							<p>
@@ -57,7 +57,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 						</div>
 					</div>
 					<div class="item">
-						<img alt="" src="images/image3.png" />
+						<img alt="自由" src="images/image3.png" />
 						<div class="carousel-caption">
 							
 							<p>
@@ -180,7 +180,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 				<li class="divider">
 				</li>
 				<li>
-					<a href="#">留言（未开发 = =！）</a>
+					<a href="#message">留言</a>
 				</li>
 			</ul>
         </div>
@@ -338,6 +338,12 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 			</div>
 		</div>
 	</div>
+     <!-- 多说评论框 start -->
+	<div class="row">
+		<div class="span12"><a name="message">
+        <div class="ds-thread" data-thread-key="home" data-title="home" data-url="xuelinf.github.io/Blog"></div></a>
+        </div></div>
+<!-- 多说评论框 end -->
 	<div class="row">
 		<div class="span12">
 			<div class="navbar navbar-inverse">
@@ -385,8 +391,37 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
     <script src="scripts/jquery.pin.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://cdn.bootcss.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+   <!--设置固定元素-->
     <script>$(".pin-wrapper").pin();</script>
-
+<!--设置固定元素 end-->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xuelinf"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --> 
+<!--设置锚点平滑滚动-->
+<script>
+$('a[href*=#]').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var $target = $(this.hash);
+    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+    if ($target.length) {
+    var targetOffset = $target.offset().top;
+    $('html,body').animate({
+    scrollTop: targetOffset
+    },
+    500);
+    return false;}}});
+	</script>
+<!--设置锚点平滑滚动end-->
 
 
 
