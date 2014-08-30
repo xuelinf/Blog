@@ -103,28 +103,65 @@
 		<div class="span1">
 		</div>
 		<div class="span10">
-        <span class="label">随笔</span>
-        <h1 class="text-center">学习路线</h1>
+        <span class="label">JavaScript学习笔记</span>
+        <h1 class="text-center">AngularJS介绍</h1>
         <p class="lead">&nbsp;</p>
         <p class="lead">&nbsp;</p>
-        <p class="lead">做个简短的学习流程吧，免得自己看见这个想学，看见那个也想学，最终什么都不了了之了：</p>
+        <p class="lead">AngularJS是一款开源 JavaScript函式库，由Google维护，用来协助单一页面应用程式运行的。它的目标是透过MVC模式 (MVC) 功能增强基于浏览器的应用，使开发和测试变得更加容易。</p>
 
-<p class="lead">先罗列一下规划的原则，以及自己准备的发展方向。首先，继续前端事业，随后鉴于做动态网页的需求，服务器端肯定要自己慢慢一个人搞定，所以这些交互的东西，也是不得不学的。那么学完这些，再研究些程序语言，毕竟掌握脚本语言，可做的面并不宽，虽然nodejs可以做更多，但是毕竟轻量级。最后就是学会怎么独立开发一款产品，一个人的话，可能开发周期要长一些。最后的最后，当然是对产品生产的研究，这就是产品经理方面的知识了。</p>
+<p class="lead"><a href="#" id="slecter">MVC模式</a>是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。</p>
 
-<p class="lead">下面是路线</p>
+<pre><p class="lead">（控制器Controller）- 负责转发请求，对请求进行处理。</p>
 
-<p class="lead">目前阶段，javaScript深入研究中，jquery实战中&hellip;&hellip;</p>
+<p class="lead">（视图View） - 界面设计人员进行图形界面设计。</p>
 
-<p class="lead">路线:javaScript--&gt;jquery--&gt;Ajax,Xml,Json--&gt;PHP&amp;node.js--&gt;SQL(mongodb,mySQL)--&gt;Python--&gt;ProductManager</p>
+<p class="lead">（模型Model） - 程序员编写程序应有的功能（实现算法等等）、数据库专家进行数据管理和数据库设计(可以实现具体的功能)。</p></pre>
 
-<p class="lead">以上为基本路线图，但是期间穿插学习<a href="#" id="slecter">bootstrap&amp;AngularJS</a>，<span id="grumble1">正则表达式</span>，firebug，从以实战为主。</p>
-
-<p class="lead">注意点：尽量扎实一些，流于粗浅的话，最后也会不过是个纸老虎。培养良好的代码习惯，写代码不是最终目的，而是培养一个良好的思维和逻辑水平，利于自己再处理事务上的效率和协调能力。</p>
+<p class="lead">函式库读取包含附加自定义（标签属性）的HTML， 遵从这些自定义属性中的指令，并将页面中的输入或输出与由JavaScript变量表示的模型绑定起来。这些JavaScript变量的值可以手工设置，或者从静态或动态JSON资源中获取。</p>
 
 <p>&nbsp;</p>
 
-<p class="lead">最后告诉自己，智商上讲，天外有天人外有人，但是只有努力的人，才能一步一步攀上高峰。环境压抑你的肉体，但是要在思想和能力上腾飞，才有希望去做自己想做的任何事。</p>
-        <p class="lead">&nbsp;</p><p class="lead">&nbsp;</p>     
+<h3>Angular的哲学</h3>
+
+<p class="lead">设计目标：</p>
+
+<p>&nbsp;</p>
+
+<pre><p class="lead">将应用逻辑与对DOM的操作解耦。这会提高代码的可测试性。</p>
+
+<p class="lead">将应用程序的测试看的跟应用程序的编写一样重要。代码的构成方式对测试的难度有巨大的影响。</p>
+
+<p class="lead">将应用程序的客户端与服务器端解耦。这允许客户端和服务器端的开发可以齐头并进，并且让双方的复用成为可能。</p>
+
+<p class="lead">指导开发者完成构建应用程序的整个历程: 从用户界面的设计，到编写业务逻辑，再到测试。</p>
+
+<p class="lead">Angular遵循软件工程的MVC模式,并鼓励展现，数据，和逻辑组件之间的松耦合.通过依赖注入（dependency injection），Angular为客户端的Web应用带来了传统服务端的服务，例如独立于视图的控制。 因此，后端减少了许多负担，产生了更轻的Web应用。</p></pre>
+
+<p>&nbsp;</p>
+
+<h3>可爱之处</h3>
+
+<p class="lead">AngularJS通过为开发者呈现一个更高层次的抽象来简化应用的开发。如同其他的抽象技术一样，这也会损失一部分灵活性。换句话说，并不是所有的应用都适合用AngularJS来做。AngularJS主要考虑的是构建CRUD应用。幸运的是，至少90%的WEB应用都是CRUD应用。但是要了解什么适合用AngularJS构建，就得了解什么不适合用AngularJS构建。</p>
+
+<p>&nbsp;</p>
+
+<h3>AngularJS能将你从以下的噩梦中解脱出来：</h3>
+
+<h3>使用回调：</h3><p class="lead">回调的使用会打乱你的代码的可读性，让你的代码变得支离破碎，很难看清本来的业务逻辑。移除一些常见的代码，例如回调，是件好事。大幅度地减少你因为JavaScript这门语言的设计而不得不写的代码，能让你把自己应用的逻辑看得更清楚。</p>
+
+<h3>手动编写操作DOM元素的代码：</h3><p class="lead">操作DOM是AJAX应用很基础的一部分，但它也总是很&ldquo;笨重&rdquo;并且容易出错。用声明的方式描述的UI界面可随着应用状态的改变而变化，能让你从编写低级的DOM操作代码中解脱出来。绝大部分用AngularJS写的应用里，开发者都不用再自己去写操作DOM的代码，不过如果你想的话还是可以去写。</p>
+
+<h3>对UI界面读写数据：</h3><p class="lead">AJAX应用的很大一部是CRUD操作。一个经典的流程是把服务端的数据组建成内部对象，再把对象编成HTML表单，用户修改表单后再验证表单，如果有错再显示错误，然后将数据重新组建成内部对象，再返回给服务器。这个流程里有太多太多要重复写的代码，使得代码看起来总是在描述应用的全部执行流程，而不是具体的业务逻辑和业务细节。</p>
+
+<h3>开始前得写大量的基础性的代码：</h3><p class="lead">通常你需要写很多的基础性的代码才能实现一个&ldquo;Hello World&rdquo;的应用。用AngularJS的话，它会提供一些服务让你很容易地正式开始写你的应用，而这些服务都是以一种Guice-like dependency-injection式的依赖注入自动加入到你的应用中去的,这让你能很快的进入你应用的具体开发。特别的是，你还能全盘掌握自动化测试的初始化过程。</p>
+<p>&nbsp;</p>
+
+<p>参考：</p>
+<p><a href="http://www.w3cschool.cc/angularjs/angularjs-tutorial.html">w3c AngularJS学习</a></p>
+<p><a href="http://zh.wikipedia.org/wiki/AngularJS">AngularJS维基百科</a></p>
+<p><a href="http://woxx.sinaapp.com/">AngularJS中文站</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 		</div>
@@ -132,7 +169,12 @@
 		</div>
 	</div>
 	
-
+    <!-- 多说评论框 start -->
+	<div class="row">
+		<div class="span12">
+        <div class="ds-thread" data-thread-key="20140827" data-title="学习路线" data-url="xuelinf.github.io/Blog/articles/20140827.html"></div>
+        </div></div>
+<!-- 多说评论框 end -->
 
 	<div class="row">
 		<div class="span12">
@@ -175,21 +217,13 @@
 			</div>
 		</div>
 	</div>
-    <!-- 多说评论框 start -->
-	<div class="row">
-		<div class="span12">
-        <div class="ds-thread" data-thread-key="20140827" data-title="学习路线" data-url="xuelinf.github.io/Blog/articles/20140827.html"></div>
-        </div></div>
-<!-- 多说评论框 end -->
+    
 </div>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-
 <script src="../scripts/jquery.pin.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://cdn.bootcss.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<!--加入气泡提醒-->
-
 <script>$(".pin-wrapper").pin();</script>   
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -209,9 +243,10 @@ var duoshuoQuery = {short_name:"xuelinf"};
     <script>
 	$('#slecter').click(function(){
 	$(this).grumble({
-	text:'  AngularJS是一款开源 JavaScript函式库。Bootstrap是Twitter推出的一个用于前端开发的开源工具包。 ',
-		angle: 185,
-		distance: 5,
+	text:' （Model-View-Controller） ',
+		angle: 270,
+		distance: 40,
+		type:"alt-",
 		showAfter: 10,
 		hideAfter: false,
 		hasHideButton: true,
@@ -219,8 +254,7 @@ var duoshuoQuery = {short_name:"xuelinf"};
 		
 })
 	});</script>
-<!--气泡提醒-->
-
+<!--气泡提醒-->	
 </body>
 </html>
 
